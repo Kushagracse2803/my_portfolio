@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Your Title</title>
+<meta name="description" content="Your one-line pitch goes here.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fafaf8;
+  --bg1:#f4f3ef;
+  --bg2:#edecea;
+  --bg3:#e4e2de;
+  --ink:#0f0f0f;
+  --ink2:#2c2c2c;
+  --ink3:#5c5c5c;
+  --ink4:#9a9a9a;
+  --w:#ffffff;
+  --border:rgba(0,0,0,0.07);
+  --border2:rgba(0,0,0,0.12);
+  --border3:rgba(0,0,0,0.18);
+  --acc:#0a5c3c;
+  --acc2:#0d7a50;
+  --acc-l:#e8f5ef;
+  --acc-ll:#f0faf5;
+  --gold:#7a5c0a;
+  --gold-l:#fdf5e0;
+  --blue:#0a3c6e;
+  --blue-l:#e8f0fa;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+  --max:1160px;
+  --r:10px;
+  --r2:16px;
+  --r3:22px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6;font-size:16px}
+.sec{max-width:var(--max);margin:0 auto;padding:5rem 3rem}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Coming Soon</h1>
-    </header>
-    </body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="n-logo">Your Name</a>
+  <ul class="n-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact" class="n-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero-wrap"></section>
+
+<!-- STORY / ABOUT -->
+<section class="story-sec sec"></section>
+
+<!-- PROJECTS -->
+<section id="projects" class="proj-sec sec"></section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills-sec sec"></section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="exp-sec sec"></section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-sec sec"></section>
+
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+</body>
 </html>
