@@ -29,7 +29,7 @@
 }
 
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6;font-size:16px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.7;font-size:16px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 
 /* ─── SECTION WRAPPER ─── */
 .sec{max-width:var(--max);margin:0 auto;padding:5rem 3rem}
@@ -44,26 +44,26 @@ nav{
   border-bottom:1px solid var(--border);
 }
 .n-logo{
-  font-family:var(--serif);font-size:1.1rem;font-weight:600;
-  color:var(--ink);text-decoration:none;letter-spacing:-0.01em;
-  display:flex;align-items:center;gap:0.6rem;
+  font-family:var(--serif);font-size:1.25rem;font-weight:700;
+  color:var(--ink);text-decoration:none;letter-spacing:-0.02em;
+  display:flex;align-items:center;gap:0.7rem;
 }
 .n-logo-dot{width:7px;height:7px;background:var(--acc);border-radius:50%;animation:blink 2.5s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
 .n-links{display:flex;align-items:center;gap:2.25rem;list-style:none}
 .n-links a{
-  font-family:var(--sans);font-size:0.82rem;font-weight:500;
+  font-family:var(--sans);font-size:0.88rem;font-weight:600;
   color:var(--ink3);text-decoration:none;letter-spacing:0.01em;
-  transition:color .2s;
+  transition:color .2s,font-weight .2s;
 }
-.n-links a:hover{color:var(--ink)}
+.n-links a:hover{color:var(--acc);font-weight:700}
 .n-cta{
-  font-family:var(--sans);font-size:0.8rem;font-weight:600;
-  background:var(--ink);color:var(--w);
-  padding:0.45rem 1.1rem;border-radius:8px;
-  text-decoration:none;transition:opacity .2s;
+  font-family:var(--sans);font-size:0.85rem;font-weight:700;
+  background:var(--acc);color:var(--w);
+  padding:0.5rem 1.25rem;border-radius:8px;
+  text-decoration:none;transition:all .2s;letter-spacing:0.02em;
 }
-.n-cta:hover{opacity:0.82}
+.n-cta:hover{opacity:0.9;transform:translateY(-2px);box-shadow:0 8px 20px rgba(10,92,60,0.2)}
 .n-ham{display:none;background:none;border:none;font-size:1.2rem;color:var(--ink);cursor:pointer}
 
 /* ─── HERO ─── */
@@ -76,56 +76,56 @@ nav{
 }
 .h-tag{
   display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--sans);font-size:0.72rem;font-weight:600;
-  letter-spacing:0.08em;text-transform:uppercase;
+  font-family:var(--sans);font-size:0.75rem;font-weight:800;
+  letter-spacing:0.15em;text-transform:uppercase;
   color:var(--acc);background:var(--acc-l);
-  padding:0.35rem 0.9rem;border-radius:100px;
-  margin-bottom:1.75rem;
+  padding:0.4rem 1rem;border-radius:100px;
+  margin-bottom:2rem;
 }
 .h-tag::before{content:'';width:6px;height:6px;background:var(--acc);border-radius:50%;animation:blink 2.5s infinite}
 .h-name{
   font-family:var(--serif);
-  font-size:clamp(3rem,5.5vw,5.2rem);
-  font-weight:700;line-height:1;
-  letter-spacing:-0.03em;color:var(--ink);
-  margin-bottom:0.3rem;
+  font-size:clamp(3.5rem,6.5vw,5.8rem);
+  font-weight:700;line-height:1.1;
+  letter-spacing:-0.04em;color:var(--ink);
+  margin-bottom:0.5rem;
 }
 .h-name .it{font-style:italic;color:var(--acc)}
 .h-sub-title{
-  font-family:var(--serif);font-style:italic;font-weight:400;
-  font-size:clamp(1rem,1.8vw,1.3rem);
-  color:var(--ink3);margin-bottom:1.75rem;letter-spacing:-0.01em;
+  font-family:var(--serif);font-style:italic;font-weight:500;
+  font-size:clamp(1.2rem,2.2vw,1.6rem);
+  color:var(--ink2);margin-bottom:1.75rem;letter-spacing:-0.01em;
 }
 .h-desc{
-  font-family:var(--sans);font-size:0.98rem;font-weight:400;
-  color:var(--ink2);line-height:1.85;max-width:500px;margin-bottom:2.25rem;
+  font-family:var(--sans);font-size:1.05rem;font-weight:500;
+  color:var(--ink2);line-height:1.9;max-width:550px;margin-bottom:2.25rem;
 }
 .h-desc strong{color:var(--ink);font-weight:600}
 .h-chips{display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:2.5rem}
 .hchip{
-  font-family:var(--sans);font-size:0.72rem;font-weight:500;
-  color:var(--ink3);border:1px solid var(--border2);
-  background:var(--w);padding:0.3rem 0.75rem;border-radius:100px;
-  transition:all .2s;
+  font-family:var(--sans);font-size:0.78rem;font-weight:600;
+  color:var(--ink2);border:1.5px solid var(--border2);
+  background:var(--w);padding:0.4rem 0.95rem;border-radius:100px;
+  transition:all .2s;letter-spacing:0.02em;
 }
-.hchip.on{background:var(--acc);color:var(--w);border-color:var(--acc)}
-.hchip:hover{border-color:var(--ink3);color:var(--ink)}
+.hchip.on{background:var(--acc);color:var(--w);border-color:var(--acc);font-weight:700;box-shadow:0 4px 12px rgba(10,92,60,0.15)}
+.hchip:hover{border-color:var(--acc);color:var(--acc);background:var(--acc-ll)}
 .h-btns{display:flex;gap:0.9rem;flex-wrap:wrap}
 .btn-fill{
-  font-family:var(--sans);font-size:0.85rem;font-weight:600;
-  background:var(--ink);color:var(--w);
-  padding:0.8rem 1.75rem;border-radius:10px;
-  text-decoration:none;transition:transform .2s,opacity .2s;
-  display:inline-flex;align-items:center;gap:0.4rem;
+  font-family:var(--sans);font-size:0.9rem;font-weight:700;
+  background:var(--acc);color:var(--w);
+  padding:0.9rem 2rem;border-radius:10px;
+  text-decoration:none;transition:all .3s;
+  display:inline-flex;align-items:center;gap:0.5rem;letter-spacing:0.01em;
 }
-.btn-fill:hover{opacity:0.85;transform:translateY(-2px)}
+.btn-fill:hover{opacity:0.9;transform:translateY(-3px);box-shadow:0 12px 30px rgba(10,92,60,0.25)}
 .btn-out{
-  font-family:var(--sans);font-size:0.85rem;font-weight:500;
-  color:var(--ink2);border:1.5px solid var(--border3);
-  background:transparent;padding:0.8rem 1.75rem;border-radius:10px;
-  text-decoration:none;transition:all .2s;
+  font-family:var(--sans);font-size:0.9rem;font-weight:600;
+  color:var(--ink);border:2px solid var(--border2);
+  background:transparent;padding:0.9rem 2rem;border-radius:10px;
+  text-decoration:none;transition:all .3s;
 }
-.btn-out:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
+.btn-out:hover{border-color:var(--acc);color:var(--acc);background:var(--acc-ll);transform:translateY(-3px)}
 
 .h-photo-col{display:flex;flex-direction:column;gap:1rem}
 .h-photo{
@@ -164,8 +164,8 @@ nav{
   background:var(--w);border:1px solid var(--border);border-radius:var(--r2);
   padding:1rem;text-align:center;
 }
-.h-stat-n{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--ink);letter-spacing:-0.04em}
-.h-stat-l{font-family:var(--sans);font-size:0.62rem;font-weight:500;color:var(--ink4);margin-top:2px;letter-spacing:0.02em}
+.h-stat-n{font-family:var(--serif);font-size:1.8rem;font-weight:800;color:var(--acc);letter-spacing:-0.04em;line-height:1}
+.h-stat-l{font-family:var(--sans);font-size:0.7rem;font-weight:600;color:var(--ink);margin-top:4px;letter-spacing:0.04em;text-transform:uppercase}
 
 /* ─── FADE IN (used across whole site) ─── */
 .fi{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
@@ -196,29 +196,31 @@ nav{
 /* Section Header Typographies matching Arpita's spec */
 .s-eye {
   font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   color: var(--acc);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.2rem;
 }
 .s-h {
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-  font-weight: 600;
-  line-height: 1.25;
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.2;
   color: var(--ink);
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
 }
 .s-h .it { font-style: italic; color: var(--acc); }
 .s-sub {
   font-family: var(--sans);
-  font-size: 0.95rem;
-  color: var(--ink3);
-  max-width: 600px;
+  font-size: 1.05rem;
+  color: var(--ink2);
+  max-width: 650px;
   margin-bottom: 3.5rem;
+  font-weight: 500;
+  line-height: 1.8;
 }
 
 /* Featured Project Card Setup */
@@ -228,15 +230,15 @@ nav{
   border: 1px solid var(--border2);
   border-radius: var(--r3);
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   background: var(--w);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.05);
   cursor: pointer;
-  transition: box-shadow .3s, transform .3s;
+  transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .proj-feat:hover {
-  box-shadow: 0 16px 48px rgba(0,0,0,0.08);
-  transform: translateY(-2px);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
 }
 
 /* Project Cards Visual Panels */
@@ -315,29 +317,29 @@ nav{
 /* Descriptive Project Content Area */
 .p-body { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
 .proj-sm-card .p-body { padding: 1.5rem 1.6rem; }
-.p-type { font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink4); margin-bottom: 0.4rem; }
-.p-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 700; color: var(--ink); margin-bottom: 0.6rem; letter-spacing: -0.01em; line-height: 1.25; }
-.proj-feat .p-title { font-size: 1.8rem; }
-.p-desc { font-family: var(--sans); font-size: 0.88rem; font-weight: 400; color: var(--ink3); line-height: 1.7; margin-bottom: 1.25rem; }
+.p-type { font-family: var(--sans); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--acc); margin-bottom: 0.6rem; }
+.p-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: var(--ink); margin-bottom: 0.8rem; letter-spacing: -0.02em; line-height: 1.3; }
+.proj-feat .p-title { font-size: 2rem; }
+.p-desc { font-family: var(--sans); font-size: 0.95rem; font-weight: 500; color: var(--ink2); line-height: 1.8; margin-bottom: 1.25rem; }
 
 .p-kpi-row { display: flex; gap: 2rem; margin-bottom: 1.25rem; }
-.pkr-n { font-family: var(--serif); font-size: 1.35rem; font-weight: 700; color: var(--ink); letter-spacing: -0.03em; }
-.pkr-l { font-family: var(--sans); font-size: 0.6rem; font-weight: 500; color: var(--ink4); margin-top: 1px; letter-spacing: 0.02em; }
+.pkr-n { font-family: var(--serif); font-size: 1.5rem; font-weight: 800; color: var(--acc); letter-spacing: -0.03em; }
+.pkr-l { font-family: var(--sans); font-size: 0.65rem; font-weight: 600; color: var(--ink); margin-top: 2px; letter-spacing: 0.03em; text-transform: uppercase; }
 
 .p-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.5rem; }
-.p-tag { font-family: var(--sans); font-size: 0.66rem; font-weight: 500; color: var(--ink3); background: var(--bg); border: 1px solid var(--border); padding: 0.2rem 0.55rem; border-radius: 4px; }
-.p-main-lnk { font-family: var(--sans); font-size: 0.78rem; font-weight: 600; color: var(--acc); display: inline-flex; align-items: center; gap: 0.3rem; text-decoration: none; transition: gap .2s; }
-.p-main-lnk:hover { gap: 0.5rem; }
+.p-tag { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; color: var(--acc); background: var(--acc-l); border: 1px solid var(--acc-l); padding: 0.3rem 0.7rem; border-radius: 6px; }
+.p-main-lnk { font-family: var(--sans); font-size: 0.85rem; font-weight: 700; color: var(--acc); display: inline-flex; align-items: center; gap: 0.4rem; text-decoration: none; transition: all .3s; letter-spacing: 0.01em; }
+.p-main-lnk:hover { gap: 0.7rem; font-weight: 800; text-decoration: underline; }
 
 /* Secondary Projects Sub-Grid Layout (3 Columns) */
 .sm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 .proj-sm-card {
   background: var(--w); border: 1px solid var(--border2); border-radius: var(--r3);
-  overflow: hidden; cursor: pointer; transition: box-shadow .3s, transform .3s;
+  overflow: hidden; cursor: pointer; transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex; flex-direction: column;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
 }
-.proj-sm-card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.07); transform: translateY(-2px); }
+.proj-sm-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.1); transform: translateY(-4px); }
 
 /* Responsive adjustments for mid/small-screen configurations */
 @media(max-width: 1024px) {
@@ -347,4 +349,99 @@ nav{
   .proj-feat { grid-template-columns: 1fr; }
   .proj-feat .pv { min-height: 280px; }
   .sm-grid { grid-template-columns: 1fr; }
+}
+/* ==========================================================================
+   ─── ADDITIONAL SPECS FOR THE PORTFOLIO UPGRADE ───
+   ========================================================================== */
+
+/* Split Section for Why AI */
+#philosophy {
+  background: var(--bg);
+}
+
+#philosophy .s-h {
+  margin-bottom: 0;
+}
+
+#philosophy .h-desc {
+  color: var(--ink2);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+/* Upgraded Skills Infrastructure Layout */
+#skills .hchip {
+  font-size: 0.82rem;
+  padding: 0.45rem 1.1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 100px;
+  background: var(--w);
+  border: 1px solid var(--border2);
+  color: var(--ink2);
+}
+
+#skills .hchip.on {
+  background: var(--acc-l);
+  color: var(--acc);
+  border-color: rgba(10, 92, 60, 0.2);
+  font-weight: 600;
+}
+
+/* Responsive updates for the split layout */
+@media(max-width: 968px) {
+  #philosophy {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 4rem 1.25rem !important;
+  }
+}
+/* ─── TYPOGRAPHY GRAPHIC CORRECTIONS ─── */
+
+/* 1. Make Main Titles Heavy and Striking */
+.h-name {
+  font-weight: 800 !important; /* Heavy editorial punch */
+  letter-spacing: -0.04em !important;
+}
+
+/* 2. Fix Section Headers ("Work I've Shipped" / "What I Bring") */
+.s-h {
+  font-weight: 700 !important;
+  font-size: clamp(2.2rem, 4vw, 3rem) !important; /* Scaled up for prominence */
+  letter-spacing: -0.03em !important;
+  margin-bottom: 1rem !important;
+}
+
+/* 3. Give the "Why AI" Left Quote Maximum Impact */
+#philosophy .s-h {
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.04em !important;
+}
+
+/* 4. Improve Body/Description Readability and Weight */
+.h-desc, .p-desc, #philosophy .h-desc p {
+  font-weight: 400 !important;
+  color: var(--ink2) !important;
+  font-size: 1.02rem !important; /* Slightly larger text body */
+  line-height: 1.75 !important;
+}
+
+/* 5. Fix Project Card Title Hierarchy */
+.p-title {
+  font-size: 1.6rem !important; /* Prominent title size */
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Ensure secondary card titles are well-balanced */
+.proj-sm-card .p-title {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+}
+
+/* 6. Bold the Metric Highlights */
+.h-stat-n, .pkr-n {
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
 }
